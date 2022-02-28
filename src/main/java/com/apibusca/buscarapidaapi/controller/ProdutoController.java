@@ -36,10 +36,10 @@ public class ProdutoController {
         return produtoRepository.save(produto);
     }
 
-    @DeleteMapping("/produto/{id}")
+    @DeleteMapping("/produto")
     @ApiOperation("Deleta um produto da loja pelo ID")
-    public void deleteProduto(@PathVariable(value = "id") long id){
-        produtoRepository.deleteById(id);
+    public void deleteProduto(@RequestBody Produto produto){
+        produtoRepository.delete(produto);
     }
 
     @PutMapping("/produto")

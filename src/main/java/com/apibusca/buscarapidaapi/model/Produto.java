@@ -14,8 +14,8 @@ public class Produto implements Serializable  {
     @Column(nullable = false, length = 50)
     private String nomeProduto;
 
-    @Column( length = 150)
-    private String picture;
+    @Column
+    private Integer qntestoque;
 
     @Column
     private Float preco;
@@ -40,11 +40,11 @@ public class Produto implements Serializable  {
         this.nomeProduto = nomeProduto;
     }
 
-    public String getPicture() {
-        return picture;
+    public Integer getQntestoque() {
+        return qntestoque;
     }
 
-    public void setPicture(String picture) {
-        this.picture = picture;
+    public void setQntestoque(Integer qntestoque) {
+        this.qntestoque = qntestoque;
     }
 }
