@@ -1,8 +1,10 @@
-# busca-rapida-api
+Nessa API, temos um modelo de CRUD para uma loja de calças, é possivel através de requisições HTTP,
+realizar buscas no estoque da loja, inserir novos produtos, alterar produtos existentes, e deletar produto.
 
+A API foi desenvolvida em Spring Boot, utilizando a metodologia MVC. 
 
+######
 
-###############################
 Metodos que contemplam a API
 
 listarProdutos()
@@ -38,5 +40,18 @@ atualizaProduto()
 	"preco": Tipo Float
 	Recebendo esses dados a API salva os novos dados na base de dados.
 
-##########################################################
+Essas configurações estão no arquivo ProdutoController.java (/src/main/com.apibuscarapidaapi/controller)
+
+#######
+
 As configurações de acesso ao banco de dados, devem ser feitas no arquivo application.properties (../src/resources)
+
+#######
+ 
+ As configurações de tabelas que podem ser criadas e as existentes, estão na pasta model (/src/main/com.apibuscarapidaapi/model).
+ Aqui podemos definir as configurações de tabelas do banco de dados e criar novas relações, nesse arquivo podemos definir getters e setters.
+ 
+#######
+
+O repositorio que faz a integração e consultas fica na pasta repository (/src/main/com.apibuscarapidaapi/repository)
+ele extende para uma class de consulta a banco de dados (CrudRepository).
